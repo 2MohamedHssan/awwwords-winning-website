@@ -75,9 +75,9 @@ function Hero() {
   },[loadedVideos])
   
   return (
-    <div className="relative h-dvh overflow-x-hidden">
+    <div className="relative h-dvh overflow-x-hidden" id="nexus">
       {isLoading && (
-        <div className="flex-center  absolute w-screen overflow-hidden h-dvh z-100 bg-violet-50">
+        <div className="flex-center absolute w-screen overflow-hidden h-dvh z-100 bg-violet-50">
           <div className="three-body">
             <div className="three-body__dot"/>
             <div className="three-body__dot"/>
@@ -87,7 +87,7 @@ function Hero() {
       )}
       <div className="relative z-10 h-dvh overflow-hidden rounded-lg bg-blue-75 " id="video-frame">
         <div>
-          <div className="mask-clip-path absolute-center absolute z-40 size-64 cursor-pointer overflow-hidden rounded-lg">
+          <div className="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg">
             <div className="origin-center scale-50 opacity-0 transition-all duration-500 ease-in hover:scale-100 hover:opacity-100" 
               onClick={handleVDClick}
             >
@@ -115,7 +115,7 @@ function Hero() {
 
           <video 
             src={getVideoSrc(backgroundIndex)} 
-            // autoPlay 
+            autoPlay 
             loop 
             muted
             className="absolute z-20 size-full top-0 left-0 object-center object-cover" 

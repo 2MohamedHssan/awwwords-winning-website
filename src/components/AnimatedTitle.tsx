@@ -1,7 +1,11 @@
 import gsap from "gsap"
 import { useEffect, useRef } from "react"
-
-function AnimatedTitle({children,title, clasContainer}:any) {
+interface AnimatedTitleProps{
+  title:string;
+  children?:any;
+  clasContainer:string
+} 
+function AnimatedTitle({children,title, clasContainer}:AnimatedTitleProps) {
   const containerRef=useRef<any>(null)
 
   useEffect(()=>{
